@@ -24,6 +24,15 @@ case "$1" in
     clear_data)
         rm -rf "$(pwd)"/data/*.csv "$(pwd)"/data/*.html
     ;;
+    inside_generator)
+        docker run --rm -v "$(pwd)/data:/data" generator-app ls -ls /data
+    ;;
+    inside_reporter)
+        docker run --rm -v "$(pwd)/data:/data" reporter-app ls -ls /data
+    ;;
+    *)
+        echo "Данная команда отсутствует в списке команд"
+    ;;
 
 esac
 
