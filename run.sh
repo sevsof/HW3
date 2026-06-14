@@ -22,7 +22,7 @@ case "$1" in
         ls -R
     ;;
     clear_data)
-        rm -rf "$(pwd)/data/*.csv" "$(pwd)/data/*.html"
+        rm -rf "$(pwd)"/data/*.csv "$(pwd)"/data/*.html
     ;;
 
 esac
